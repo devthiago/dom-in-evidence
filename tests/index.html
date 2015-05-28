@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM In Evidence</title>
+	<style>
+		.config {
+			margin-bottom: 30px;
+		}
+
+		#square {
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+
+		#rectangle {
+			width: 200px;
+			height: 100px;
+			background: red;
+		}
+
+		#circle {
+			width: 100px;
+			height: 100px;
+			background: red;
+			-moz-border-radius: 50px;
+			-webkit-border-radius: 50px;
+			border-radius: 50px;
+		}
+
+		#oval {
+			width: 200px;
+			height: 100px;
+			background: red;
+			-moz-border-radius: 100px / 50px;
+			-webkit-border-radius: 100px / 50px;
+			border-radius: 100px / 50px;
+		}
+
+		#triangle {
+			width: 0;
+			height: 0;
+			border-left: 50px solid transparent;
+			border-right: 50px solid transparent;
+			border-bottom: 100px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div id="square" class="config"></div>
+	<div id="rectangle" class="config"></div>
+	<div id="circle" class="config"></div>
+	<div id="oval" class="config"></div>
+	<div id="triangle" class="config"></div>
+
+	<script src="../build/dom.in.evidence.js"></script>
+	<script>
+		var evidence = new DOMInEvidence();
+	</script>
+</body>
+</html>
